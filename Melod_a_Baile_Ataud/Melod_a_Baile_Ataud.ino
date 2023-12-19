@@ -1,0 +1,99 @@
+// Suscríbete a mi canal de Youtube: Aprende con Ruben´s
+
+#define NOTE_FA4  349
+#define NOTE_SOL4  392
+#define NOTE_LA4  440
+#define NOTE_LAS4 466
+#define NOTE_DO5  523
+#define NOTE_RE5  587
+#define NOTE_FA5  698
+#define NOTE_SOL5  784
+#define NOTE_LA5  880
+#define NOTE_LAS5 932
+
+int Melodia[] = {
+  NOTE_LA4, 0, NOTE_LA4, NOTE_LA4,
+  NOTE_DO5, 0, NOTE_LAS4, NOTE_LA4, 
+  NOTE_SOL4,0, NOTE_SOL4, NOTE_LAS5,
+  NOTE_LA5, NOTE_LAS5, NOTE_LA5, NOTE_LAS5,
+  NOTE_SOL4,0, NOTE_SOL4, NOTE_LAS5,
+  NOTE_LA5, NOTE_LAS5, NOTE_LA5, NOTE_LAS5,
+  NOTE_LAS4, NOTE_LAS4, NOTE_LAS4, NOTE_LAS4,
+  NOTE_LAS4, NOTE_LAS4, NOTE_LAS4, NOTE_LAS4,
+  NOTE_LAS4, NOTE_LAS4, NOTE_LAS4, NOTE_LAS4,
+  NOTE_LAS4, NOTE_LAS4, NOTE_LAS4, NOTE_LAS4,
+  NOTE_LAS4, NOTE_LAS4, NOTE_LAS4, NOTE_LAS4,
+  NOTE_RE5, NOTE_RE5, NOTE_RE5, NOTE_RE5,
+  NOTE_DO5, NOTE_DO5, NOTE_DO5, NOTE_DO5, 
+  NOTE_FA5, NOTE_FA5, NOTE_FA5, NOTE_FA5, 
+  NOTE_SOL5, NOTE_SOL5, NOTE_SOL5, NOTE_SOL5,
+  NOTE_SOL5, NOTE_SOL5, NOTE_SOL5, NOTE_SOL5, 
+  NOTE_SOL5, NOTE_SOL5, NOTE_SOL5, NOTE_SOL5, 
+  NOTE_DO5, NOTE_LAS4, NOTE_LA4, NOTE_FA4,
+  NOTE_SOL4, 0, NOTE_SOL4, NOTE_RE5,
+  NOTE_DO5, 0, NOTE_LAS4, 0,
+  NOTE_LA4, 0, NOTE_LA4, NOTE_LA4,
+  NOTE_DO5, 0, NOTE_LAS4, NOTE_LA4, 
+  NOTE_SOL4,0, NOTE_SOL4, NOTE_LAS5,
+  NOTE_LA5, NOTE_LAS5, NOTE_LA5, NOTE_LAS5,
+  NOTE_SOL4,0, NOTE_SOL4, NOTE_LAS5,
+  NOTE_LA5, NOTE_LAS5, NOTE_LA5, NOTE_LAS5,
+  NOTE_SOL4, 0, NOTE_SOL4, NOTE_RE5,
+  NOTE_DO5, 0, NOTE_LAS4, 0,
+  NOTE_LA4, 0, NOTE_LA4, NOTE_LA4,
+  NOTE_DO5, 0, NOTE_LAS4, NOTE_LA4, 
+  NOTE_SOL4,0, NOTE_SOL4, NOTE_LAS5,
+  NOTE_LA5, NOTE_LAS5, NOTE_LA5, NOTE_LAS5,
+  NOTE_SOL4,0, NOTE_SOL4, NOTE_LAS5,
+  NOTE_LA5, NOTE_LAS5, NOTE_LA5, NOTE_LAS5,
+ };
+
+int duracionNotas[] = {
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  4,4,4,4,
+  };
+
+void setup() {
+
+}
+void loop() {
+    for (int Nota = 0; Nota < 112; Nota++) {
+    int duracionNota = 750 / duracionNotas[Nota];
+    tone(8, Melodia[Nota], duracionNota);
+    int pausaEntreNotas= duracionNota * 1.30;
+    delay(pausaEntreNotas);
+    
+    noTone(8);
+  }
+}
